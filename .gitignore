@@ -1,0 +1,110 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# PyCharm project
+.idea/
+
+# Project
+.vagrant/
+.env/
+Vagrantfile
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# contacts & backup files
+resources/
+
+#scrapedleads folder
+scrapedleads/
+
+# Config file
+scraper/Config.py
+scraper/*.png
+web/Config.py
+statistics/Config.py
+statistics/web/static/*
+#statistics/facebook_likes
+
+scraper/config_wrapper.py
+commons/artifacts.py
+scraper/cookies/
+
+# Web
+web/static/.webassets-cache/
+web/csv_status/*
+web/uploads/*
+web/static/app/assets/app/css/app.css
+web/static/app/assets/app/js/app.js
+web/static/app/assets/app/css/vendors.css
+web/static/app/assets/app/js/vendors.js
+
+# Cron for auto test
+scraper/test/result.json
+
+# Local
+server.crt
+server.csr
+server.key
+Vagrantfile - Backup
+
+# Additional Bootstraps
+DevOps/bootstrap-2nd.sh
+comp_faces.py
+DevBoxProvision.sh
+requirments.txt
+.vagrant
+.idea
+Vagrantfile
