@@ -12,19 +12,19 @@ logging.basicConfig(format='%(asctime)s %(levelname)s   %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S', filename=LOGGER, level=logging.INFO)
 DEFAULT_RESIZE = (512, 512)
 
-def save_video_frames(video_instance, video_path='tmp/SampleVideo_1280x720_1mb.mp4', resize=DEFAULT_RESIZE):
+def save_video_frames(video_instance, video_path='SampleVideo_1280x720_1mb.mp4', resize=DEFAULT_RESIZE):
     start_time = datetime.now()
     print('my video instance = %s' % video_instance)
-
-    folder = BASE + 'vid-instance%d' % video_instance
+    print('my video path = %s' % video_path)
+    folder = BASE + 'vid-instance%d/' % video_instance
     if not os.path.exists(folder):
         os.makedirs(folder, 0777)
-    cap = cv2.VideoCapture(video_path)
+    cap = cv2.VideoCapture(BASE + video_path)
     while not cap.isOpened():
         cap = cv2.VideoCapture(video_path)
         cv2.waitKey(1000)
         print "Wait for the header"
-    print('my video path = %s' % video_path)
+
     pos_frame = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)
     frame_rate = 0
     while True:
@@ -53,4 +53,4 @@ def save_video_frames(video_instance, video_path='tmp/SampleVideo_1280x720_1mb.m
 
 
 if __name__ == "__main__":
-    save_video_frames(1)
+    save_video_frames(3)

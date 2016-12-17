@@ -108,3 +108,4 @@ requirments.txt
 .vagrant
 .idea
 Vagrantfile
+tmp/
