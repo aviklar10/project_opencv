@@ -21,7 +21,7 @@ def save_video_frames(video_instance, video_path='SampleVideo_1280x720_1mb.mp4',
         os.makedirs(folder, 0777)
     cap = cv2.VideoCapture(BASE + video_path)
     while not cap.isOpened():
-        cap = cv2.VideoCapture(video_path)
+        cap = cv2.VideoCapture(BASE + video_path)
         cv2.waitKey(1000)
         print "Wait for the header"
 
@@ -38,7 +38,7 @@ def save_video_frames(video_instance, video_path='SampleVideo_1280x720_1mb.mp4',
                 logging.ERROR(str(e))
 
             pos_frame = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)
-            print str(pos_frame) + " frames"
+            # print str(pos_frame) + " frames"
         else:
             cap.set(cv2.cv.CV_CAP_PROP_POS_FRAMES, pos_frame - 1)
             print "frame is not ready"
